@@ -13,7 +13,7 @@ $row = mysqli_fetch_array($ketqua);
 <div id="content" class="p-4 p-md-5 pt-5">
 
     <form class="p-md-3" action="capnhat_nv.php" method="post">
-        <h5 class="text-center">Thêm Nhân Viên Mới</h5>
+        <h5 class="text-center">Chỉnh Sửa Nhân Viên Mới</h5>
         <div class="mb-3">
             <label for="exampleInputMaNV" class="form-label">Mã Nhân Viên</label>
             <input class="form-control" type="text" name="MANV" placeholder="Mã Nhân Viên" value="<?php echo $row['MANV']; ?>">

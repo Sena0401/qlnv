@@ -5,25 +5,26 @@
 			<span class="sr-only">Toggle Menu</span>
 		</button>
 	</div>
+	
 	<div class="p-4 pt-5">
-		<h1><a href="home.php" class="logo">Splash</a></h1>
+		<div class="sidebar-heading text-center"><img class="img-fluid" src="../img/Logo.svg"></div>
 		<ul class="list-unstyled components mb-5">
 			<li class="active">
-				<a class="bi bi-house-fill" href=" #homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"> Home</a>
+				<a href=" #homeSubmenu" data-toggle="collapse" aria-expanded="false" class="bi bi-house-fill dropdown-toggle"> Home</a>
 				<ul class=" collapse list-unstyled" id="homeSubmenu">
 					<li>
-						<a href="nhansu.php">Nhân Sự</a>
+						<a  class="bi bi-people-fill"  href="nhansu.php">  Nhân Sự</a>
 					</li>
 					<li>
-						<a href="#">Home 2</a>
+						<a class="bi bi-stack" href="phongban.php">  Phòng Ban</a>
 					</li>
 					<li>
-						<a href="#">Home 3</a>
+						<a class="bi bi-person-fill" href="">  User</a>
 					</li>
 				</ul>
 			</li>
 			<li>
-				<a href="#">About</a>
+				<a class="bi bi-info-circle-fill" href="#">  About</a>
 			</li>
 			<li>
 				<a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
@@ -47,23 +48,6 @@
 			</li>
 		</ul>
 
-		<div class="mb-5">
-			<h3 class="h6">Subscribe for newsletter</h3>
-			<form action="#" class="colorlib-subscribe-form">
-				<div class="form-group d-flex">
-					<div class="icon"><span class="icon-paper-plane"></span></div>
-					<input type="text" class="form-control" placeholder="Enter Email Address">
-				</div>
-			</form>
-		</div>
-
-		<div class="footer">
-			<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				Copyright &copy;<script>
-					document.write(new Date().getFullYear());
-				</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
-				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-		</div>
-
+	
 	</div>
 </nav>
