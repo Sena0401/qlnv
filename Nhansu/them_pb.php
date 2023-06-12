@@ -5,12 +5,13 @@ if (!$connect) {
 }
 
 $MAPB = $_POST['MAPB'];
-$TENPB = $_POST[''];
+$TENPB = $_POST['TENPB'];
+$CHITIET = $_POST['CHITIET'];
 
 if (isset($_POST["capnhat"])) {
-    $sql = "INSERT INTO nhanvien VALUES ('$MASACH','$HOTENNV','$NGAYSINH','$SOCCCD','$GIOITINH','$NGAYVAOLAM','$HESOLUONG','$MACV','$TDHV','$MAPB')";
+    $sql = "INSERT INTO phongban VALUES ('$MAPB','$TENPB','$CHITIET')";
     $ketqua = mysqli_query($connect, $sql);
 }
 
 
-header('location:nhansu.php');
+header('location:phongban.php');

@@ -58,7 +58,7 @@
                                                 echo "<td>" . $row["CHITIET"] . "</td>";
 
 
-                                                echo "<td><center><a class=\"text-decoration-none bi bi-trash3 btn btn-danger \" href=\"xoa_pb.php?MAPB=" . $row["MAPB"] . "\"> Xoá</a> </center> </td>";
+                                                echo "<td><center><a class=\"text-decoration-none bi bi-trash3 btn btn-danger \" href=\"xoa_phongban.php?MAPB=" . $row["MAPB"] . "\"> Xoá</a> </center> </td>";
                                                 echo "<td><center><a class=\"text-decoration-none bi bi-pen btn btn-info\" href=\"chinhsua_pb.php?MAPB=" . $row["MAPB"] . "\"> Cập nhật</a></center></td>";
                                             }
                                             ?>

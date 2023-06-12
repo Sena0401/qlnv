@@ -17,12 +17,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputDate" class="form-label">Chi Tiết</label>
-                    <input class="form-control" type="text" name="CHITIEt" placeholder="Chi Tiết Phòng Ban">
+                    <input class="form-control" type="text" name="CHITIET" placeholder="Chi Tiết Phòng Ban">
                 </div>
                 
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input class="btn btn-primary" type="submit" name="capnhat">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <input class="btn btn-primary" type="submit" value="Thêm" name="capnhat">
                 </div>
             </form>
         </div>
