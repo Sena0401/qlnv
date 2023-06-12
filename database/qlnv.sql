@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 04, 2023 lúc 01:51 PM
+-- Thời gian đã tạo: Th6 12, 2023 lúc 06:25 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -24,6 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Cấu trúc bảng cho bảng `admin`
+--
+
+CREATE TABLE `admin` (
+  `USERNAME` varchar(30) NOT NULL,
+  `PASSWORD` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `admin`
+--
+
+INSERT INTO `admin` (`USERNAME`, `PASSWORD`) VALUES
+('2', ' 21'),
+('admin', 'admin'),
+('nhuvsnhu', 'nhumap');
+
+-- --------------------------------------------------------
+
+--
 -- Cấu trúc bảng cho bảng `chucvu`
 --
 
@@ -39,7 +59,7 @@ CREATE TABLE `chucvu` (
 
 INSERT INTO `chucvu` (`MACV`, `TENCV`, `CHITIET`) VALUES
 ('daubep', 'Đầu Bếp', 'Nấu ăn'),
-('it', 'Infomation Technology', 'Bộ Phận Kỹ Thuật');
+('it', 'Nhân Viên Kỹ Thuật', 'Bộ Phận Kỹ Thuật');
 
 -- --------------------------------------------------------
 
@@ -65,8 +85,8 @@ CREATE TABLE `nhanvien` (
 --
 
 INSERT INTO `nhanvien` (`MANV`, `HOTENNV`, `NGAYSINH`, `SOCCCD`, `GIOITINH`, `NGAYVAOLAM`, `HESOLUONG`, `MACV`, `TDHV`, `MAPB`) VALUES
-('nv01', 'Trần Minh Thiện', '2003-01-04', '1234567890', 'Nam', '2023-06-01', 5, 'daubep', 'Đại Học', 'bep'),
-('nv02', '  Như22', '1111-11-11', '11123456789', 'Nữ', '2023-06-22', 5, 'it', '4', 'it');
+('nv02', '   Như22', '1111-11-11', '11123456789', 'Nữ', '2023-06-22', 5, 'daubep', '5', 'bep'),
+('nv03', 'Khải', '2023-06-12', '11123456789', 'Nam', '2023-06-24', 2, 'it', 'Cao Đẳng', 'it');
 
 -- --------------------------------------------------------
 
@@ -76,7 +96,7 @@ INSERT INTO `nhanvien` (`MANV`, `HOTENNV`, `NGAYSINH`, `SOCCCD`, `GIOITINH`, `NG
 
 CREATE TABLE `phongban` (
   `MAPB` varchar(10) NOT NULL,
-  `TENPB` varchar(10) NOT NULL,
+  `TENPB` varchar(50) NOT NULL,
   `CHITIET` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
 
@@ -85,31 +105,18 @@ CREATE TABLE `phongban` (
 --
 
 INSERT INTO `phongban` (`MAPB`, `TENPB`, `CHITIET`) VALUES
-('bep', 'Nhà Bếp', 'Nấu ăn'),
-('it', 'Infomation', 'Phòng IT');
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `user`
---
-
-CREATE TABLE `user` (
-  `USERNAME` varchar(30) NOT NULL,
-  `PASSWORD` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
-
---
--- Đang đổ dữ liệu cho bảng `user`
---
-
-INSERT INTO `user` (`USERNAME`, `PASSWORD`) VALUES
-('admin', 'admin'),
-('nhuvsnhu', 'nhumap');
+('bep', ' Nhà Bếp', 'Nấu'),
+('it', ' Infomation Technology', 'Phòng IT1111');
 
 --
 -- Chỉ mục cho các bảng đã đổ
 --
+
+--
+-- Chỉ mục cho bảng `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`USERNAME`);
 
 --
 -- Chỉ mục cho bảng `chucvu`
@@ -128,12 +135,6 @@ ALTER TABLE `nhanvien`
 --
 ALTER TABLE `phongban`
   ADD PRIMARY KEY (`MAPB`);
-
---
--- Chỉ mục cho bảng `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`USERNAME`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

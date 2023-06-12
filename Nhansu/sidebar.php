@@ -7,7 +7,7 @@
 	</div>
 
 	<div class="p-4 pt-5">
-		<div class="sidebar-heading text-center"><img class="img-fluid" src="../img/Logo.svg"></div>
+		<div class="sidebar-heading text-center"><img class="img-fluid" src="../img/logo.png"></div>
 		<ul class="list-unstyled components mb-5">
 			<li>
 				<a href="home.php" class ="bi bi-house-fill">  Home</a>
